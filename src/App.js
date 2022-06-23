@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { background, color } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
+import Header from "./components/Header";
+import ToDoForm from "./components/ToDoForm";
+import ToDoList from "./components/ToDoList";
+import logo from "./logo.svg";
+import "./styles/App.css";
 
 function App() {
+  // const [counter, setCounter] = useState("hello");
+
+  // const updateCounter = () => {
+  //   console.log(counter)
+  //   setCounter((prevState) => {
+  //     if (prevState === "hello") return counter + "I";
+  //     else {
+  //       return counter + "J";
+  //     }
+  //   });
+  // };
+
+  // useEffect(() => {
+  //   console.log(counter);
+  // }, [counter]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {/* <h2>{counter}</h2> */}
+      {/* <button onClick={updateCounter} style={{backgroundColor:"red"}}>Click Me!</button> */}
+      {/* <Header /> */}
+      <h1>To Do App</h1>
+      <ToDoList/>
+      {/* <ToDoForm/> */}
+    </>
   );
 }
 
